@@ -1,0 +1,1156 @@
+body {
+    font-family: 'Young Serif', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Tambahkan latar belakang untuk efek Glassmorphism yang terlihat */
+    background-color: #f0f0f0; 
+    background-image: url('https://picsum.photos/1920/1080?grayscale'); /* Contoh background */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* --- Navbar Styling --- */
+.custom-navbar {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px;
+    z-index: 100;
+    color: #fff;
+    transition: top 0.3s, background-color 0.3s;
+    /* Glassmorphism Navbar */
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+.navbar-hidden {
+    top: -100px; 
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar-menu {
+    display: flex; 
+    align-items: center;
+    gap: 25px;
+    margin-left: 80px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a8e0a8;
+}
+
+/* --- Button Login Styling --- */
+.login-btn {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    color: #fff;
+    padding-bottom: 20vh;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: 'Young Serif', serif !important;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-family: 'Young Serif', serif !important;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.shop-btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #fff;
+    color: #1a4d2e;
+}
+
+/* --- Marquee Section Styling --- */
+.marquee-section {
+    overflow: hidden;
+    background-color: #f5e3b3; 
+    color: #1a3d2f;
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding: 15px 0;
+    animation: marquee 25s linear infinite;
+}
+
+/* --- Features Section --- */
+.features {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('/images/background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Young Serif', serif;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+}
+
+.section-title span {
+    display: inline-block;
+    background-color: #6c7c63;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 170px;
+    font-weight: bold;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    max-width: 350px;
+    text-align: center;
+}
+
+.feature-item img {
+    width: 140px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 40px; 
+    font-weight: bold;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* --- Glassmorphism Auth Modal Styling (Login/Register) --- */
+.auth-modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); 
+    align-items: center; 
+    justify-content: center; 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+}
+
+.auth-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.2); 
+    animation: fadeIn 0.3s ease-out;
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff5722;
+}
+
+.auth-form h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-family: 'Young Serif', serif;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.auth-form input:not([type="number"]),
+.auth-form input[readonly],
+.auth-form textarea,
+.auth-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1); 
+    color: #fff;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 16px;
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+.auth-form input:focus {
+    border-color: #ff5722;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff5722; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #e64a19;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.switch-form a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* --- NEW PRODUCT GALLERY STYLING (Not affected by changes) --- */
+.products-section {
+    padding: 60px 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.693), rgba(0, 0, 0, 0.655)), 
+                url('/images/b2b7.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    color: #fff; /* Pastikan teks tetap terbaca */
+}
+
+
+.product-gallery {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-top: 30px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.product-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.product-gallery::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.product-card {
+    min-width: 500px;
+    max-width: 260px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img,
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.product-details {
+    padding: 16px;
+    flex-grow: 1;
+    color: #fff;
+}
+
+.product-details h3 {
+    font-family: 'Young Serif', serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.product-description {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffc107;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.buy-btn {
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.buy-btn:hover {
+    background: rgba(76, 175, 80, 1);
+    transform: translateY(-2px);
+}
+
+
+/* --- CUSTOM PROFILE STYLING (Existing) --- */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #ff5722;
+    color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.profile-btn:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.profile-icon-svg {
+    width: 24px;
+    height: 24px;
+    color: #ff5722;
+    transition: color 0.3s ease;
+}
+
+.profile-btn:hover .profile-icon-svg {
+    color: #fff;
+}
+
+#profile-email {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.navbar-menu {
+    display: flex; 
+    align-items: center;
+    gap: 25px;
+    margin-left: 750px; /* ubah angka ini untuk geser lebih kanan/kiri */
+}
+
+
+/* --- SHOP ICON STYLING (NEW) --- */
+.shop-btn-container {
+    position: relative;
+    display: none; 
+}
+
+.shop-icon-svg {
+    width: 30px; 
+    height: 30px;
+    color: #fff; /* Mengubah warna ikon menjadi putih agar kontras dengan navbar glassmorphism */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.shop-icon-svg:hover {
+    color: #ff5722; /* Hover color accent */
+}
+
+#order-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* ==================================================
+        PEMBARUAN UTAMA: MODAL PEMBELIAN & PESANAN
+================================================== 
+*/
+
+/* --- MODAL PEMBELIAN & PESANAN (Glassmorphism Containers) --- */
+
+#purchase-modal, #orders-modal {
+    display: none; /* Controlled by JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Glassmorphism Styling untuk konten modal */
+#purchase-modal .auth-modal-content,
+#orders-modal .auth-modal-content {
+    background: rgba(255, 255, 255, 0.15); /* Sangat transparan */
+    backdrop-filter: blur(20px); /* Efek blur yang lebih kuat */
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Border putih transparan */
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5); /* Shadow lebih jelas */
+    padding: 30px; 
+    border-radius: 20px; 
+    width: 90%;
+    max-width: 680px; /* Ukuran modal diperlebar */
+    position: relative;
+    text-align: left;
+    color: #fff; /* Teks default putih */
+}
+
+#purchase-modal h2,
+#orders-modal h2 {
+    font-family: 'Young Serif', serif;
+    color: #fff; 
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#purchase-modal .close-btn,
+#orders-modal .close-btn {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 32px;
+}
+
+/* Input Fields inside Purchase Modal */
+#purchase-modal label {
+    color: #fff; 
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#purchase-modal input,
+#purchase-modal textarea,
+#purchase-modal select {
+    background-color: rgba(255, 255, 255, 0.1); /* Input lebih transparan */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+#purchase-modal input[readonly] {
+    background-color: rgba(255, 255, 255, 0.05); /* Lebih gelap saat readonly */
+    font-weight: 500;
+}
+
+#purchase-modal input:focus,
+#purchase-modal textarea:focus,
+#purchase-modal select:focus {
+    border-color: #4CAF50; /* Fokus ke warna hijau */
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); 
+}
+
+/* Horizontal Layout for Purchase Form */
+.horizontal-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.horizontal-group .form-group {
+    flex: 1; 
+    margin-bottom: 0; 
+}
+
+.qty-group-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 150px; /* Lebar lebih jelas untuk kuantitas/ukuran */
+}
+
+#purchase-form hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 30px 0;
+}
+
+.purchase-confirm-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.purchase-confirm-btn:hover {
+    background-color: #e64a19;
+}
+
+/* --- ORDERS MODAL SPECIFIC STYLING (Tampilan Keranjang/Pesanan) --- */
+
+.order-list-title {
+    color: #ff5722;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.order-item-card {
+    /* Gaya untuk setiap item pesanan di dalam keranjang/list order */
+    background: rgba(255, 255, 255, 0.95); /* Hampir putih untuk kontras yang jelas */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #4CAF50; /* Garis hijau sebagai penanda */
+}
+
+.order-item-card p {
+    color: #333;
+    margin: 3px 0;
+    font-size: 15px;
+}
+
+.order-item-card strong {
+    color: #1a3d2f; /* Warna teks gelap untuk detail penting */
+    font-weight: 700;
+}
+
+.order-detail-group {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    flex-wrap: wrap; 
+}
+
+/* Scrollbar styling for orders-list-container */
+#orders-list-container {
+    max-height: 400px; /* Batasi tinggi untuk scroll */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#orders-list-container::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar sedikit lebih besar */
+}
+
+#orders-list-container::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; /* Warna hijau */
+    border-radius: 10px;
+}
+#orders-list-container::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+        /* CSS Tambahan untuk Simulasi Admin/Login Gate */
+        .page-content-wrapper {
+            display: none; /* Sembunyikan konten utama secara default */
+            min-height: 100vh;
+        }
+
+        /* Modifikasi Modal Auth agar tampil full screen sebagai gate */
+        .auth-modal-overlay.login-gate {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #00000056; /* Background terang untuk gate */
+            display: flex !important; /* Pastikan terlihat */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .auth-modal-overlay:not(.login-gate) {
+            background-color: rgba(0, 0, 0, 0.7); /* Modal biasa */
+        }
+
+        .auth-modal-overlay.login-gate .auth-modal-content {
+            background-color: #00000038;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+        }
+        
+        .auth-modal-overlay.login-gate .auth-close-btn {
+            display: none; /* Sembunyikan tombol close di login gate */
+        }
+        
+        /* ADMIN DASHBOARD STYLES */
+        #admin-dashboard {
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .dashboard-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .dashboard-card h3 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .dashboard-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            list-style-type: none;
+            font-size: 14px;
+        }
+
+        .dashboard-list li:last-child {
+            border-bottom: none;
+        }
+
+        .dashboard-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .dashboard-form input[type="text"], 
+        .dashboard-form input[type="number"],
+        .dashboard-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .dashboard-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .dashboard-form button:hover {
+            background-color: #43a047;
+        }
+        
+        .admin-section-title {
+            text-align: center;
+            font-family: 'Young Serif', serif;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .admin-section-title h2 {
+             font-size: 2.5em;
+        }
+        
+        .admin-section-title span {
+            color: #8BC34A;
+            font-weight: 500;
+        }
+        
+        /* Style untuk order-item-card di modal pesanan */
+        .order-item-card {
+            background-color: rgba(76, 175, 80, 0.8); /* Warna hijau transparan */
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .order-detail-group p {
+            font-size: 14px;
+            margin: 3px 0;
+        }
+
+/* --- Mobile Styling --- */
+@media (max-width: 768px) {
+    .custom-navbar {
+        padding: 15px 20px;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .hero-section {
+        padding-left: 20px;
+    }
+    .hero-content {
+        padding-bottom: 10vh;
+        padding-left: 0; 
+        padding-right: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    /* Mobile for Modals */
+    #purchase-modal .auth-modal-content,
+    #orders-modal .auth-modal-content {
+        max-width: 90%;
+    }
+    .horizontal-group {
+        flex-direction: column; /* Ubah layout horizontal menjadi vertikal di mobile */
+        gap: 0;
+    }
+    .horizontal-group .form-group, .qty-group-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+.footer-section {
+    background: linear-gradient(to top, #0b3d0b, #0f4d0f);
+    padding: 40px 5%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 120px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer-col-group {
+    display: flex;
+    gap: 60px;
+    flex: 2;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.footer-col {
+    min-width: 120px;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #a8ffb4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin: 5px 0;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.footer-col p:hover {
+    color: #ffffff;
+}
+
+.footer-nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 120px;
+    align-items: flex-end;
+}
+
+.footer-nav-right p {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-nav-right p:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-top {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.scroll-top:hover {
+    transform: translateY(-4px);
+    color: #88ff88;
+}
+ .admin-dashboard-container {
+            display: flex;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        }
+
+        .admin-sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #2d3436 0%, #1e272e 100%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sidebar-header img {
+            width: 40px;
+            margin-right: 15px;
+            filter: brightness(0) invert(1);
+        }
+        .sidebar-header h2 {
+            margin: 0;
+            font-family: 'Young Serif', serif;
+            font-size: 22px;
+            color: #4CAF50;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+            padding-top: 20px;
+        }
+        .sidebar-nav .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            color: #dfe6e9;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            gap: 15px;
+            font-size: 16px;
+        }
+        .sidebar-nav .nav-link:hover {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border-left: 4px solid #4CAF50;
+            padding-left: 21px;
+        }
+        .sidebar-nav .nav-link.active {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #ffffff;
+            border-left: 4px solid #4CAF50;
+            padding-left: 21px;
+            font-weight: 600;
+        }
+        .sidebar-nav .nav-link .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sidebar-footer #admin-logout-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: rgba(217, 83, 79, 0.8);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar-footer #admin-logout-btn:hover {
+            background-color: #c9302c;
+        }
+
+        .admin-main-content {
+            flex-grow: 1;
+            margin-left: 260px;
+            padding: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-section {
+            /* Glassmorphism Effect */
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            
+            padding: 30px;
+            color: #1e272e;
+        }
+        .admin-section h2 {
+            font-family: 'Young Serif', serif;
+            color: #1e272e;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        /* Ensure form labels are dark for readability */
+        .admin-section .form-group label {
+            color: #1e272e;
+            font-weight: 500;
+        }
+        /* --- Mengubah Warna Opsi Dropdown --- */
+#purchase-modal select option {
+  background-color: #2d3436; /* Warna latar belakang gelap */
+  color: #ffffff; /* Warna teks putih */
+}
